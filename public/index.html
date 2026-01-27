@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/JHtoICO.ico">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <img src="img/logo2.PNG" class="logo">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>   
+    </ul>
+  </nav>
+</header>
+
+<section id="inicio">
+  <div class="galeria-banner-overlay">
+  <h2>Construimos la piscina de tus sueños con más de 20 años de experiencia y calidad garantizada.</h2>
+  <p>Calidad, diseño y confianza en cada proyecto</p>
+  </div>
+</section>
+
+<section id="galeria">
+
+  <div class="cards-galeria">
+
+    <!-- CARD PISCINA PEQUEÑA-->
+    <div class="card">
+      <h3>Piscinas Pequeñas</h3>
+      <p>Diseños compactos ideales para patios y espacios reducidos.</p>
+
+      <img src="img/chica/piscinachica1.jpg" alt="Piscina pequeña">
+
+    </div>
+
+    <!--CARD PISCINA MEDIANA-->
+    <div class="card">
+      <h3>Piscinas Medianas</h3>
+      <p>Perfectas para uso familiar con mayor comodidad.</p>
+
+      <img src="img/mediana/piscinamediana1.jpg" alt="Piscina mediana">
+
+    </div>
+
+    <!--CARD PISCINA GRANDE-->
+    <div class="card">
+      <h3>Piscinas Grandes</h3>
+      <p>Proyectos de gran tamaño para condominios y espacios amplios.</p>
+
+      <img src="img/grande/piscinagrande1.jpg" alt="Piscina grande">
+
+    </div>
+    
+  </div>
+  <div class="contenedor-btn-proyectos">
+    <a href="galeria.html" class="btn-proyectos">
+      Nuestros Proyectos
+    </a>
+</section>
+
+<section id="contacto">
+  <div class="contacto-titulo">
+    <h2>¡CONTÁCTANOS!</h2>
+    <p>Déjanos tus datos y nos pondremos en contacto contigo a la brevedad.</p>
+  </div>
+
+  <!--FORMULARIO FUNCIONAL-->
+  <form action="/contacto" method="GET">
+
+    <input type="text"
+           name="nombre"
+           placeholder="Nombre"
+           required>
+
+    <input type="email"
+           name="correo"
+           placeholder="Correo electrónico"
+           required>
+
+    <input type="tel"
+           name="telefono"
+           placeholder="Teléfono celular"
+           required>
+
+    <select name="region" required>
+      <option value="">Seleccione región</option>
+      <option>Maule</option>
+      <option>O'Higgins</option>
+      <option>Biobío</option>
+    </select>
+
+    <textarea name="mensaje"
+              maxlength="255"
+              placeholder="Mensaje (máx. 255 caracteres)"
+              required></textarea>
+
+    <button type="submit">Enviar🚀</button>
+
+  </form>
+</section>
+
+<!--WSP E IG-->
+<div class="icono-flotante instagram">
+  <span class="tooltip">¡Síguenos!</span>
+  <a href="https://www.instagram.com/piscinashernandez56" target="_blank">
+    <img src="img/instagram.png" alt="Instagram">
+  </a>
+</div>
+
+<div class="icono-flotante whatsapp">
+  <span class="tooltip">¡Escríbenos!</span>
+  <a href="https://wa.me/56933651128" target="_blank">
+    <img src="img/whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>
+
+</body>
+</html>

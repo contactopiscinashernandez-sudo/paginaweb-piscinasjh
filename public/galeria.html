@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería | Empresa Piscinas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/JHtoICO.ico">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<!-- HEADER (EL MISMO DEL INDEX) -->
+<header>
+  <nav>
+    <img src="img/logo2.PNG" class="logo">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>   
+    </ul>
+  </nav>
+</header>
+
+<section class="galeria-banner">
+  <div class="galeria-banner-overlay">
+    <h2>Sección de Galería</h2>
+    <p>
+      Acá encontrarás algunos de los trabajos realizados por nuestra empresa,
+      reflejando la calidad, diseño y dedicación en cada proyecto.
+    </p>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="galeria-contenido">
+  <div class="galeria-grid">
+
+    <div class="galeria-item">
+      <img src="img/chica/piscinachica2.jpg" alt="Piscina pequeña">
+    </div>
+
+    <div class="galeria-item">
+      <img src="img/mediana/piscinamediana2.jpg" alt="Piscina mediana">
+    </div>
+
+    <div class="galeria-item">
+      <img src="img/grande/piscinagrande2.jpg" alt="Piscina grande">
+    </div>
+
+    <div class="galeria-item">
+      <img src="img/chica/piscinachica3.jpg" alt="Piscina pequeña">
+    </div>
+
+    <div class="galeria-item">
+      <img src="img/mediana/piscinamediana3.jpg" alt="Piscina mediana">
+    </div>
+
+    <div class="galeria-item">
+      <img src="img/grande/piscinagrande3.jpg" alt="Piscina grande">
+    </div>
+
+    <div class="galeria-item">
+      <img src="img/chica/piscinachica1.jpg" alt="Piscina pequeña">
+    </div>
+
+    <div class="galeria-item">
+      <img src="img/mediana/piscinamediana1.jpg" alt="Piscina mediana">
+    </div>
+
+    <div class="galeria-item">
+      <img src="img/grande/piscinagrande1.jpg" alt="Piscina grande">
+    </div>
+
+    <div class="galeria-item">
+      <img src="img/grande/piscinagrande4.jpg" alt="Piscina grande">
+    </div>
+
+    <div class="galeria-item">
+      <img src="img/grande/piscinagrande5.jpg" alt="Piscina grande">
+    </div>
+
+    <div class="galeria-item">
+      <img src="img/grande/piscinagrande6.jpg" alt="Piscina grande">
+    </div>
+  </div>
+</section>
+</a>
+
+<section id="contacto">
+  <div class="contacto-titulo">
+    <h2>¡CONTÁCTANOS!</h2>
+    <p>Déjanos tus datos y nos pondremos en contacto contigo a la brevedad.</p>
+  </div>
+
+  <!--FORMULARIO FUNCIONAL-->
+  <form action="/contacto" method="POST">
+
+    <input type="text"
+           name="nombre"
+           placeholder="Nombre"
+           required>
+
+    <input type="email"
+           name="correo"
+           placeholder="Correo electrónico"
+           required>
+
+    <input type="tel"
+           name="telefono"
+           placeholder="Teléfono celular"
+           required>
+
+    <select name="region" required>
+      <option value="">Seleccione región</option>
+      <option>Maule</option>
+      <option>O'Higgins</option>
+      <option>Biobío</option>
+    </select>
+
+    <textarea name="mensaje"
+              maxlength="255"
+              placeholder="Mensaje (máx. 255 caracteres)"
+              required></textarea>
+
+    <button type="submit">Enviar🚀</button>
+
+  </form>
+</section>
+
+<div class="icono-flotante instagram">
+  <span class="tooltip">¡Síguenos!</span>
+  <a href="https://www.instagram.com/piscinashernandez56" target="_blank">
+    <img src="img/instagram.png" alt="Instagram">
+  </a>
+</div>
+
+<div class="icono-flotante whatsapp">
+  <span class="tooltip">¡Escríbenos!</span>
+  <a href="https://wa.me/56933651128" target="_blank">
+    <img src="img/whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-cerrar">&times;</span>
+  <img id="lightbox-img" src="" alt="Imagen ampliada">
+</div>
+<script>
+  const imagenes = document.querySelectorAll('.galeria-item img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const cerrar = document.querySelector('.lightbox-cerrar');
+
+  imagenes.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  cerrar.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
+</body>
+</html>
